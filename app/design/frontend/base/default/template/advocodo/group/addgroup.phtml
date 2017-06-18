@@ -1,0 +1,53 @@
+<?php
+/**
+ * This file is part of Advocodo_Group for Magento.
+ *
+ * @license All rights reserved, Advocodo
+ * @author Advocodo <dev@advocodo.com> <@AdvocodoCompany>
+ * @category Advocodo
+ * @package Advocodo_Group
+ * @copyright Copyright (c) 2017 Advocodo (http://www.Advocodo.com)
+ */
+?>
+<?php
+$school = $this->getSchool();
+$groups = $this->getGroup();
+$customGroupInputName = $this->getCustomGroupInputName();
+
+if (!empty($school)): ?>
+    <li>
+        <label for="group_id" class="required"><?php echo $this->__('Group') ?></label>
+        <div class="input-box">
+            <select name="group_id" id="group_id" title="<?php echo $this->__('Group') ?>" class="validate-group required-entry input-text">
+                <?php foreach ($groups as $group) { ?>
+                    <?php $selected = ''; ?>
+                    <?php if (strtolower($group['label']) == strtolower($school)): ?>
+                        <?php $selected = ' selected="selected"'; ?>
+                    <?php endif; ?>
+                    <?php echo '<option' . $selected . ' value="' . $this->escapeHtml($group['value']) . '">' . $group['label'] . '</option>'; ?>
+                <?php } ?>
+            </select>
+        </div>
+    </li>
+<?php else: ?>
+    <li class="fields">
+        <div class="field">
+            <label for="group" class="required"><?php echo $this->__('Group') ?></label>
+            <div class="input-box">
+                <input type="text" name="<?php echo $customGroupInputName ?>" id="<?php echo $customGroupInputName ?>" value="" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Group')) ?>" class="required-entry input-text" />
+            </div>
+        </div>
+    </li>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        jQuery(document).ready(function() {
+            jQuery('input[name="<?php echo $customGroupInputName ?>"]').on('input', function(evt) {
+                jQuery(this).val(function (_, val) {
+                    return val.toUpperCase();
+                });
+            });
+        });
+        //]]>
+    </script>
+<?php endif;?>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * This file is part of Advocodo_Group for Magento.
+ *
+ * @license All rights reserved, Advocodo
+ * @author Advocodo <dev@advocodo.com> <@AdvocodoCompany>
+ * @category Advocodo
+ * @package Advocodo_Group
+ * @copyright Copyright (c) 2017 Advocodo (http://www.Advocodo.com)
+ */
+-->
+<config>
+    <modules>
+        <Advocodo_Group>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Advocodo_Group>
+    </modules>
+</config>

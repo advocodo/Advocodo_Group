@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of Advocodo_Group for Magento.
+ *
+ * @license All rights reserved, Advocodo
+ * @author Advocodo <dev@advocodo.com> <@AdvocodoCompany>
+ * @category Advocodo
+ * @package Advocodo_Group
+ * @copyright Copyright (c) 2017 Advocodo (http://www.Advocodo.com)
+ */
+-->
+<config>
+    <modules>
+        <Advocodo_Group>
+            <version>0.1.0</version>
+        </Advocodo_Group>
+    </modules>
+    <global>
+        <models>
+            <advocodo_group>
+                <class>Advocodo_Group_Model</class>
+            </advocodo_group>
+        </models>
+        <blocks>
+            <advocodo_group>
+                <class>Advocodo_Group_Block</class>
+            </advocodo_group>
+        </blocks>
+        <helpers>
+            <advocodo_group>
+                <class>Advocodo_Group_Helper</class>
+            </advocodo_group>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <customer_register_success>
+                <observers>
+                    <create_group_for_new_customer>
+                        <type>singleton</type>
+                        <class>Advocodo_Group_Model_Observer</class>
+                        <method>createGroupForNewCustomer</method>
+                    </create_group_for_new_customer>
+                </observers>
+            </customer_register_success>
+        </events>
+        <layout>
+            <updates>
+                <advocodo_group module="Advocodo_Group">
+                    <file>advocodo_group.xml</file>
+                </advocodo_group>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Advocodo_Group>
+                    <files>
+                        <default>Advocodo_Group.csv</default>
+                    </files>
+                </Advocodo_Group>
+            </modules>
+        </translate>
+    </frontend>
+    <layout>
+        <updates>
+            <advocodo_group>
+                <file>advocodo_group.xml</file>
+            </advocodo_group>
+        </updates>
+    </layout>
+</config>

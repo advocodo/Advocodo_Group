@@ -1,0 +1,17 @@
+{
+    "name": "Advocodo/Advocodo_Group",
+    "description": "Magento module to add group list and custom group input in customer create account form",
+    "type": "magento-module",
+    "homepage": "https://github.com/advocodo/Advocodo_Group",
+    "keywords": ["magento", "module", "customer", "account"],
+    "authors": [
+        {
+            "name": "Mehdi Chaouch",
+            "email": "dev@advocodo.com",
+            "role": "owner"
+        }
+    ],
+    "require": {
+      "magento-hackathon/magento-composer-installer": "*"
+    }
+}

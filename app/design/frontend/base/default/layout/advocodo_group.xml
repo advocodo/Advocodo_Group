@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * This file is part of Advocodo_Group for Magento.
+ *
+ * @license All rights reserved, Advocodo
+ * @author Advocodo <dev@advocodo.com> <@AdvocodoCompany>
+ * @category Advocodo
+ * @package Advocodo_Group
+ * @copyright Copyright (c) 2017 Advocodo (http://www.Advocodo.com)
+ */
+-->
+<layout version="0.1.0">
+    <customer_account_create>
+        <reference name="customer_form_register">
+            <block type="advocodo_group/group" name="advocodo_group" as="advocodo_group" template="advocodo/group/addgroup.phtml" />
+        </reference>
+    </customer_account_create>
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.billing">
+            <block type="advocodo_group/group" name="advocodo_group" as="advocodo_group" template="advocodo/group/addgroup.phtml" />
+        </reference>
+    </checkout_onepage_index>
+</layout>

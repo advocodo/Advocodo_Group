@@ -1,0 +1,7 @@
+#Advocodo_Group
+app/code/community/Advocodo/Group                                       app/code/community/Advocodo/Group
+app/design/frontend/base/default/layout/advocodo_group.xml              app/design/frontend/base/default/layout/advocodo_group.xml
+app/design/frontend/base/default/template/advocodo/group/addgroup.phtml app/design/frontend/base/default/template/advocodo/group/addgroup.phtml
+app/etc/modules/Advocodo_Group.xml                                      app/etc/modules/Advocodo_Group.xml
+app/locale/en_US/Advocodo_Group.csv                                     app/locale/en_US/Advocodo_Group.csv
+app/locale/fr_FR/Advocodo_Group.csv                                     app/locale/fr_FR/Advocodo_Group.csv
