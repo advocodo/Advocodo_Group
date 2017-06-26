@@ -12,7 +12,18 @@
 <?php
 $school = $this->getSchool();
 $groups = $this->getGroup();
+$customerSchool = '';
+$customerSchoolDisabled = '';
 $customGroupInputName = $this->getCustomGroupInputName();
+$customerSession = Mage::getSingleton('customer/session');
+
+if ($customerSession->isLoggedIn()) {
+    $customer = Mage::getSingleton('customer/customer')->load($customerSession->getId());
+    $groupId = $customer->getGroupId();
+    $group = Mage::getModel('customer/group')->load($groupId);
+    $customerSchool = $group->getCustomerGroupCode();
+    $customerSchoolDisabled = 'disabled';
+}
 
 if (!empty($school)): ?>
     <li>
@@ -34,7 +45,7 @@ if (!empty($school)): ?>
         <div class="field">
             <label for="group" class="required"><?php echo $this->__('Group') ?></label>
             <div class="input-box">
-                <input type="text" name="<?php echo $customGroupInputName ?>" id="<?php echo $customGroupInputName ?>" value="" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Group')) ?>" class="required-entry input-text" />
+                <input type="text" name="<?php echo $customGroupInputName ?>" id="<?php echo $customGroupInputName ?>" value="<?php echo $customerSchool ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Group')) ?>" class="required-entry input-text" <?php echo $customerSchoolDisabled ?> />
             </div>
         </div>
     </li>
@@ -50,4 +61,4 @@ if (!empty($school)): ?>
         });
         //]]>
     </script>
-<?php endif;?>
+<?php endif; ?>
