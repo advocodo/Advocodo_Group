@@ -69,4 +69,11 @@
             </advocodo_group>
         </updates>
     </layout>
+    <phpunit>
+        <suite>
+            <modules>
+                <Advocodo_Group/>
+            </modules>
+        </suite>
+    </phpunit>
 </config>
