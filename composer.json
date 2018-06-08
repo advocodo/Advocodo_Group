@@ -11,7 +11,35 @@
             "role": "owner"
         }
     ],
+    "config": {
+        "optimize-autoloader": true
+    },
     "require": {
-      "magento-hackathon/magento-composer-installer": "*"
+        "php": ">=5.3",
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*@dev",
+        "firegento/mage-ci": "dev-master",
+        "squizlabs/php_codesniffer": "^2.2 || ^3.0",
+        "magento-ecg/coding-standard": "dev-php-5.3-compatible || ^3.1",
+        "sebastian/phpdcd": "*",
+        "sebastian/phpcpd": "*",
+        "phpmd/phpmd": "*",
+        "phploc/phploc": "*",
+        "wimg/php-compatibility": "*",
+        "simplyadmire/composer-plugins": "@dev"
+    },
+    "repositories": {
+        "firegento": {
+            "type": "composer",
+            "url": "https://packages.firegento.com"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/advocodo/Advocodo_Group/issues",
+        "source": "https://github.com/advocodo/Advocodo_Group",
+        "build": "https://travis-ci.org/advocodo/Advocodo_Group"
     }
 }

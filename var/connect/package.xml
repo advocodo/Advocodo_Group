@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Advocodo_Group</name>
+    <version>0.1.0-RC6</version>
+    <stability>stable</stability>
+    <license uri="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Magento module to add group list and custom group input in customer create account form.</summary>
+    <description>Magento module to add group list and custom group input in customer create account form.</description>
+    <notes>Check https://github.com/advocodo/Advocodo_Group/releases/latest for details.</notes>
+    <authors><author><name>Advocodo</name><user>Group</user><email>plugin@advocodo.com</email></author></authors>
+    <date>2018-06-11</date>
+    <time>12:55:45</time>
+    <contents><target name="magecommunity"><dir name="Advocodo"><dir name="Group"><dir name="Block"><file name="Group.php" hash="1d7524265f724b1f7700cdf5a5ae6596"/></dir><dir name="Helper"><file name="Data.php" hash="24019a66311119b30cd2f30916dfb1c5"/></dir><dir name="Model"><file name="Observer.php" hash="7fc807889c9463048f55c2f2a800a894"/></dir><dir name="Test"><dir name="Config"><file name="ConfigTest.php" hash="0c415d5ff4b36757aaaf14a8b5d07a1a"/></dir></dir><dir name="etc"><file name="config.xml" hash="d4cb210b36147636ffc5ecc591aea2a8"/></dir><file name=".DS_Store" hash="06d9247842bc879c607c8673dac757c7"/></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="advocodo_group.xml" hash="a5e2448d30ab21e5e31d46540647a32e"/></dir><dir name="template"><dir name="advocodo"><dir name="group"><file name="addgroup.phtml" hash="4a59d058591fef6d4d0604e3305e2950"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Advocodo_Group.xml" hash="51d1788765e43b08b782ae1d929e4c79"/></dir></target><target name="magelocale"><dir><dir name="en_US"><file name="Advocodo_Group.csv" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir><dir name="fr_FR"><file name="Advocodo_Group.csv" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>8.0.0</max></php></required></dependencies>
+</package>
