@@ -13,7 +13,7 @@
 <config>
     <modules>
         <Advocodo_Group>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </Advocodo_Group>
     </modules>
     <global>
@@ -44,6 +44,15 @@
                     </create_group_for_new_customer>
                 </observers>
             </customer_register_success>
+            <checkout_type_onepage_save_order_after>
+                <observers>
+                    <create_group_for_new_customer>
+                        <type>singleton</type>
+                        <class>Advocodo_Group_Model_Observer</class>
+                        <method>createGroupForNewCustomer</method>
+                    </create_group_for_new_customer>
+                </observers>
+            </checkout_type_onepage_save_order_after>
         </events>
         <layout>
             <updates>

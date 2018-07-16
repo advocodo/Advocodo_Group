@@ -35,7 +35,13 @@ class Advocodo_Group_Block_Group extends Mage_Core_Block_Template
         /** @var Mage_Customer_Helper_Data $groups */
         $groups = Mage::helper('customer')->getGroups();
 
-        return $groups->toOptionArray();
+        $groups = $groups->toOptionArray();
+
+        usort($groups, function($a, $b) {
+            return strcmp($a['label'], $b['label']);
+        });
+
+        return $groups;
     }
 
     /**
